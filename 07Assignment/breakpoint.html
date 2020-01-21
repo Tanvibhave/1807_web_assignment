@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 750px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<div class="row" >
+  <div class="column"  style="background-color:#ccffff;" >
+   <img src="carol.jpg"  width="300" height="300">
+    <h2>Christmas carols </h2>
+    <p> A Christmas carol is a carol (a song or hymn) on the theme of Christmas, traditionally sung at Christmas itself or during the surrounding Christmas holiday season.  </p>
+  </div>
+  
+  <div class="column" style="background-color:#b3ffff;">
+ <img src="sweet.jpg"  width="300" height="300">
+  
+    <h2>christmas sweets</h2>
+    <p></p>
+  </div>
+  
+  <div class="column" style="background-color:#99ffff;">
+  <img src="dec.jpg"  width="300" height="300">
+    <h2>christmas decoration</h2>
+    <p>A Christmas decoration is any of several types of ornamentation used at Christmastime and the greater holiday season. The traditional colors of Christmas are pine green (evergreen), snow white, and heart red. Blue and white are often used to represent winter, or sometimes Hanukkah, which occurs around the same time. Gold and silver are also very common, as are other metallic colours. Typical images on Christmas decorations include Baby Jesus, Father Christmas, Santa Claus, and the star of Bethlehem. </p>
+  </div>
+</div>
+
+</body>
+</html>
