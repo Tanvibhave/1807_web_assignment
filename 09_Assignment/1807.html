@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"  >
+  <head>
+      <title>css test</title>
+      <style>
+
+	
+	#content{
+		margin-left:152px;
+		margin-right:155px;
+		margin-bottom:10px;
+		border-style: solid;
+		border-width: 1px;
+		background-image: url("image/Goa Beach.jpg");
+	}
+	
+	#gulogo{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#guname{
+		font-size:26px;
+		text-align: center;
+		margin-bottom:20px;
+	}
+	
+	#guinfo{
+		margin-left:40px;
+		margin-right:40px;
+		font-size:19px;
+	}
+	
+	#leftbar{
+		float:left;
+		background-color:#ff6600;
+		width:324px;
+		height:260px;
+	}
+	
+	#rightbar{
+		diplay:grid;
+		float:right;
+		background-color:#ffffff;
+		width:700px;
+		height:260px;
+	}
+	
+	#header{
+		background-color:#00ffff;
+		margin-bottom:-16px;
+	}
+    
+	#footer{
+		background-color:#ffff00;
+	}
+	.blk{
+		display:inline-block;
+		border-style: solid;
+		border-width: 1px;
+		width:70px;
+		border-color:red;
+	}
+	
+	input{
+		background-color: #ff1a1a;
+		color: white;
+		text-align: center;
+		display: inline-block;
+	}
+	
+	table{
+		margin-left:500px;
+	}
+	
+	#copyright{
+		 text-align: center;
+		 padding:none;
+		 margin:none;
+	}
+	
+	#blockid
+	{
+		color:blue;
+	}
+	ol
+	{
+		display:inline-block;
+	}
+	ul
+	{
+		display:inline-block;
+	}
+	#rightbar #guimg
+	{
+		
+		margin-left:640px;
+		margin-bottom:100px;
+
+	}
+	
+    </style>
+  </head>
+  <body>
+   
+	
+	    <div id="transback" ></div>
+		<div id="content"  > 
+	      
+			     <img id="gulogo" src="image/gu_logo.png" />
+				 <div id="guname">Goa University</div>
+				
+				 <div id="guinfo" ><span style=" "> 
+				      <span style= "font-size:55px;" "font-family:Verdana">G</span>oa University </span>
+					  was established in 1985 by an Act of the State 
+				      Legislature, incorporating the then existing Centre for Post 
+					  Graduate Instruction and Research of the University of Bombay,
+					  with 13 teaching departments and 17 affiliated colleges. From a 
+					  modest beginning in 1985, the University has, over the past twenty-five 
+					  years, established itself and expanded across 12 faculties, with 24 post 
+					  graduate departments and three Centres on its campus, with 48
+					  affiliating professional and non-professional colleges.
+				 </div>
+				 <div id="bottom">
+		             <div id="header">
+					    <ol>
+						     <li> First</li>
+							 <li> Second</li>
+						</ol>
+						<ul>
+						     <li> Third</li>
+							 <li style ="color:blue"> Fourth</li>
+						</ul>
+			
+			         </div>
+                     <div id="leftbar" >
+					     <div>This is line 1 </div>
+						 <div style="visibility: hidden;" >This is line 2 </div>
+			             <div style=""><u>This is line 3</u> </div>
+						 <div style="display:none" ><img id="gulogo" src="image/gu_logo.png" />This is line 4 </div>
+						 <div>This is line 5 </div>
+			         </div>
+			         <div id="rightbar" >
+			           <span class="slk" >We start here</span><div class="blk" id="blockid">There is something in this block</div>
+					   <span class="slk" >But not so clear</span><div class="blk" id="blockid" >Why it gets positioned this way</div>
+					   <span class="slk">So we continue</span>
+					   <img id="guimg" src="image/gu_logo.png" />
+			         </div> 
+			         <div id="footer" >
+					     <input type="button" value="Click me" />
+					     <table border="1">
+					        <tr><td style=" ">AAA</td><td>BBBBBBBBBBBBBBB</td></tr>
+							<tr><td>CCCCCCCCCCCC</td><td style="border:2px solid red;">DDD</td></tr>
+			             </table>
+                     </div>			
+                 </div>     
+    </div>
+	<div id="copyright"> &copy; DCST,Goa University<span id="year"><sup>1985</sup></span> </div>
+	
+  </body>
+</html>
+
+
+
