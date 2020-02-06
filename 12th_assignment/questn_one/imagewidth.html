@@ -1,0 +1,22 @@
+<html>
+<body onresize="myFunction()">
+
+<img id="im" src="img1.jpeg"></img>
+
+<script>
+function myFunction() {
+var w = window.outerWidth;
+if(w>800){
+document.getElementById("im").src = "img1.jpeg";
+}
+if(w>399 && w<799){
+document.getElementById("im").src = "img2.jpg";
+}
+if(w<400){
+document.getElementById("im").src = "img3.jpg";
+}
+}
+</script>
+
+</body>
+</html>
