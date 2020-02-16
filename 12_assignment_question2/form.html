@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webtech</title>
+</head>
+
+<style type="text/css">
+
+	div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+}
+
+.right {
+  right: 0;
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+</style>
+<body>
+
+<div class="split">
+  <div class="centered">
+    
+ First Name: <input type="text" name="fname" id="fname" /><br/><br/>
+        Roll No: <input type="text" name="rollno" id="rollno" /><br/><br/>
+        Gender: <br>
+        <div>
+  <input type="radio" id="g1" name="gender" value="male"> Male<br>
+  <input type="radio" id="g2" name="gender" value="female" > Female<br>
+  <input type="radio" id="g3" name="gender" value="other" > Other<br>  
+        </div><br>
+
+        Semester:
+        <div>
+      <select name="semester" id="semester">
+    <option value="SEMESTER 1">SEMESTER 1</option>
+    <option value="SEMESTER 2">SEMESTER 2</option>
+    <option value="SEMESTER 3">SEMESTER 3</option>
+    <option value="SEMESTER 4">SEMESTER 4</option>
+  </select>
+    </div>
+    <br>
+
+
+        Choose Electives:<br>
+        <form>
+        <div>
+    <input type="checkbox" name="elective" value="Ethical Hacking">
+    <label for="elect1"> Ethical Hacking</label><br>
+	
+   
+	
+    <input type="checkbox" name="elective" value="IOT">
+    <label for="elect3"> IOT</label><br>
+    <br>
+       </div>
+       </form>
+        <button onclick="addRow();">Add Row</button><br/><br/>
+
+
+    
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+
+
+   <table border="1">
+
+   	    <h1>Table of records</h1>
+            
+            <tr>
+                <th>First Name</th>
+                <th>Roll NO</th>
+                <th>Gender</th>
+                <th>Semester</th>
+                <th>Electives</th>
+
+            </tr>
+            
+        </table>
+ 
+  </div>
+</div>
+     
+
+
+
+
+ <script>
+            
+            function addRow()
+            {
+              
+                var fname = document.getElementById('fname').value;
+                var rollno = document.getElementById('rollno').value;
+                var gender1 = document.querySelector('input[name="gender"]:checked').value;
+                var semester = document.getElementById('semester').value;
+
+                            
+                var elective = document.forms[0];
+                var txt = "";
+                var i;
+
+                for (i = 0; i < elective.length; i++) {
+                    if (elective[i].checked) {
+                     txt = txt + elective[i].value + " ,";
+                    }
+                  }
+                  
+                 
+                  var table = document.getElementsByTagName('table')[0];
+                  
+              
+
+                    if (fname=='') {
+                  	alert("NAME cannot be empty");
+                  }
+                  else if (rollno=='') {
+                  	alert("ROLL NO cannot be empty");
+                  }
+
+                  else{
+                  
+                  var newRow = table.insertRow(table.rows.length/2+1);
+                
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  var cel5 = newRow.insertCell(4);
+
+
+
+           
+                  cel1.innerHTML = fname;
+                  cel2.innerHTML = rollno;
+                  cel3.innerHTML = gender1;
+                  cel4.innerHTML = semester;
+                  cel5.innerHTML = txt;
+              }
+            }
+
+
+            
+        </script>
+    
+</body>
+</html>
